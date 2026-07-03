@@ -8,6 +8,9 @@
 DEVICE_PATH := device/samsung/a7y18lte
 
 # For building with minimal manifest
+BUILD_BROKEN_DUP_RULES := true
+BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
+SOONG_ALLOW_MISSING_DEPENDENCIES := true
 ALLOW_MISSING_DEPENDENCIES := true
 
 # Architecture
@@ -78,6 +81,9 @@ TARGET_NO_RADIOIMAGE := true
 # Recovery
 TARGET_USERIMAGES_USE_EXT4 := true
 TARGET_USERIMAGES_USE_F2FS := true
+TARGET_USES_MKE2FS := true
+BOARD_SUPPRESS_SECURE_ERASE := true
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 
 # Hack: prevent anti rollback
 PLATFORM_SECURITY_PATCH := 2099-12-31
