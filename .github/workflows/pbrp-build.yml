@@ -120,6 +120,7 @@ jobs:
       - name: Build PBRP
         run: |
           cd Android
+          mkdir -p out/target/product/a7y18lte/root
           source build/envsetup.sh
           lunch pb_a7y18lte-eng
           mka ${{ inputs.build_target }} -j${{ inputs.build_jobs }}
