@@ -6,9 +6,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/omni_a7y18lte.mk
+    $(LOCAL_DIR)/pb_a7y18lte.mk
 
 COMMON_LUNCH_CHOICES := \
-    omni_a7y18lte-user \
-    omni_a7y18lte-userdebug \
-    omni_a7y18lte-eng
+    pb_a7y18lte-user \
+    pb_a7y18lte-userdebug \
+    pb_a7y18lte-eng

@@ -7,16 +7,16 @@
 
 # Inherit from those products. Most specific first.
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
-
-# Inherit some common Omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
 
 # Inherit from a7y18lte device
 $(call inherit-product, device/samsung/a7y18lte/device.mk)
 
+# Inherit common PBRP product files.
+$(call inherit-product, vendor/pb/config/common.mk)
+
+# Set those variables here to overwrite the inherited values.
 PRODUCT_DEVICE := a7y18lte
-PRODUCT_NAME := omni_a7y18lte
+PRODUCT_NAME := pb_a7y18lte
 PRODUCT_BRAND := samsung
 PRODUCT_MODEL := SM-A750F
 PRODUCT_MANUFACTURER := samsung
